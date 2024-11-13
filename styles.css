@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    display: flex;
 }
 
 header {
@@ -12,6 +13,23 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    width: 100%;
+}
+
+.profile-picture {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 100px; /* Set to your desired width */
+    height: 100px; /* Set to your desired height */
+    overflow: hidden;
+    border-radius: 50%; /* Makes the image circular */
+    border: 2px solid #fff; /* Optional border */
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
 }
 
 nav ul {
@@ -32,37 +50,7 @@ nav ul li a {
 section {
     padding: 20px;
     margin: 10px 0;
-}
-
-.project, .publication {
-    background: #f4f4f4;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    margin-top: 10px;
-}
-
-form input,
-form textarea {
-    padding: 10px;
-    margin-top: 5px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 10px;
-    background: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+    margin-left: 140px; /* Leave space for the profile picture */
 }
 
 footer {
@@ -77,5 +65,9 @@ footer {
     nav ul li {
         display: block;
         margin: 5px 0;
+    }
+    .profile-picture {
+        width: 80px; /* Adjust for smaller screens */
+        height: 80px;
     }
 }
