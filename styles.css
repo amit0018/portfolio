@@ -18,8 +18,8 @@ header {
 
 .profile-picture {
     float: left; /* Position the image to the left */
-    width: 100px; /* Set to your desired width */
-    height: 100px; /* Set to your desired height */
+    width: 150px; /* Set to your desired width */
+    height: 150px; /* Set to your desired height */
     overflow: hidden;
     border-radius: 50%; /* Makes the image circular */
     border: 2px solid #fff; /* Optional border */
@@ -66,7 +66,7 @@ footer {
         margin: 5px 0;
     }
     .profile-picture {
-        width: 80px; /* Adjust for smaller screens */
-        height: 80px;
+        width: 100px; /* Adjust for smaller screens */
+        height: 100px;
     }
 }
