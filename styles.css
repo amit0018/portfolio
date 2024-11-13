@@ -47,7 +47,9 @@ nav ul li a {
 }
 
 main {
-    padding: 20px; /* Padding for the main content */
+    padding: 40px; /* Increased padding for a larger height */
+    min-height: 500px; /* Set a minimum height for the main section */
+    overflow: auto; /* Ensure the content is scrollable if it overflows */
 }
 
 footer {
