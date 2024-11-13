@@ -14,18 +14,16 @@ header {
     color: #fff;
     padding: 10px 0;
     text-align: center;
-    position: relative; /* Allow the profile picture to position relative to the header */
 }
 
 .profile-picture {
-    position: fixed;
-    top: 20px;
-    left: 20px;
+    float: left; /* Position the image to the left */
     width: 100px; /* Set to your desired width */
     height: 100px; /* Set to your desired height */
     overflow: hidden;
     border-radius: 50%; /* Makes the image circular */
     border: 2px solid #fff; /* Optional border */
+    margin-right: 20px; /* Space between image and text */
 }
 
 .profile-picture img {
@@ -50,7 +48,6 @@ nav ul li a {
 
 main {
     padding: 20px; /* Padding for the main content */
-    margin-left: 140px; /* Leave space for the profile picture */
 }
 
 footer {
@@ -58,7 +55,6 @@ footer {
     background: #333;
     color: #fff;
     padding: 10px 0;
-    position: relative; /* Ensure the footer is positioned correctly */
 }
 
 /* Responsive Styles */
