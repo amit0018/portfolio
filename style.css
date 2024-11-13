@@ -1,168 +1,81 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* styles.css */
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 0 20px;
 }
 
-h1, h2 {
-    color: #333;
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
 }
 
-a {
-    color: #007BFF;
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Header */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 30px 0;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-header .subtitle {
-    font-size: 18px;
-    font-style: italic;
-}
-
-/* Section styles */
 section {
-    margin: 50px 0;
-}
-
-/* About Section */
-.about {
-    background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
-}
-
-.about h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.about p {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-/* Research Section */
-.research {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.research h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.research ul {
-    list-style-type: none;
-}
-
-.research li {
-    font-size: 18px;
     margin: 10px 0;
 }
 
-/* Publications Section */
-.publications {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.publications h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.publications ul {
-    list-style-type: none;
-}
-
-.publications li {
-    font-size: 18px;
+.project, .publication {
+    background: #f4f4f4;
+    padding: 10px;
     margin: 10px 0;
+    border-radius: 5px;
 }
 
-.publications a {
-    color: #007BFF;
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.publications a:hover {
-    text-decoration: underline;
+form label {
+    margin-top: 10px;
 }
 
-/* Contact Section */
-.contact {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
+form input,
+form textarea {
+    padding: 10px;
+    margin-top: 5px;
 }
 
-.contact h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.contact p {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.contact a {
-    color: #007BFF;
-}
-
-.contact a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background: #333;
     color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
     text-align: center;
+    background: #333;
+    color: #fff;
     padding: 10px 0;
-    margin-top: 50px;
 }
 
-footer p {
-    font-size: 16px;
-}
-
-/* Container for centering content */
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
+/* Responsive Styles */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 5px 0;
     }
 }
