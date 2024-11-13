@@ -1,114 +1,168 @@
-/* Global Styles */
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #f4f7f6;
-    color: #333;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    font-size: 16px;
-    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    color: #333;
 }
 
 a {
-    text-decoration: none;
     color: #007BFF;
+    text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
+/* Header */
 header {
-    background-color: #2C3E50;
-    color: white;
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
     text-align: center;
-    padding: 20px 0;
 }
 
 header h1 {
-    font-size: 2.5em;
+    font-size: 36px;
     margin-bottom: 10px;
 }
 
-header p {
-    font-size: 1.2em;
-    margin-bottom: 0;
+header .subtitle {
+    font-size: 18px;
+    font-style: italic;
 }
 
+/* Section styles */
 section {
-    margin: 40px 0;
+    margin: 50px 0;
 }
 
-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #2C3E50;
+/* About Section */
+.about {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-section p {
-    font-size: 1.1em;
+.about h2 {
+    font-size: 28px;
     margin-bottom: 15px;
 }
 
-section ul {
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Research Section */
+.research {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.research h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.research ul {
     list-style-type: none;
 }
 
-section ul li {
-    font-size: 1.1em;
+.research li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Publications Section */
+.publications {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.publications h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.publications ul {
+    list-style-type: none;
+}
+
+.publications li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.publications a {
+    color: #007BFF;
+}
+
+.publications a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
+.contact a {
+    color: #007BFF;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
 footer {
-    background-color: #2C3E50;
-    color: white;
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 10px;
-    margin-top: 40px;
+    padding: 10px 0;
+    margin-top: 50px;
 }
 
 footer p {
-    font-size: 1em;
+    font-size: 16px;
 }
 
-/* Responsive Design */
+/* Container for centering content */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    header p {
-        font-size: 1em;
-    }
-
-    section h2 {
-        font-size: 1.8em;
-    }
-
-    section p, section ul li {
-        font-size: 1em;
-    }
-}
-
-@media (max-width: 480px) {
-    body {
-        padding: 10px;
-    }
-
-    header h1 {
-        font-size: 1.8em;
-    }
-
-    section h2 {
-        font-size: 1.6em;
-    }
-
-    section p, section ul li {
-        font-size: 0.9em;
+    .container {
+        width: 90%;
     }
 }
