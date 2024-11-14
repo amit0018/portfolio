@@ -19,7 +19,7 @@ header {
 .profile-picture {
     float: left; /* Position the image to the left */
     width: 400px; /* Set to your desired width */
-    height: 400px; /* Set to your desired height */
+    height: 800px; /* Set to your desired height */
     overflow: hidden;
     border-radius: 50%; /* Makes the image circular */
     border: 2px solid #fff; /* Optional border */
