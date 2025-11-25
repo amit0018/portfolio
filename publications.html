@@ -5,43 +5,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications - My Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f5f7fa;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    .page-header {
+        background: linear-gradient(135deg, #1a237e, #3949ab);
+        color: #fff;
+        padding: 60px 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .page-header h1 {
+        font-size: 42px;
+        margin: 0;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .content-section {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+        animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .content-section h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #1a237e;
+        border-left: 5px solid #1a237e;
+        padding-left: 10px;
+    }
+
+    .card-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-left: 5px solid #3949ab;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    }
+
+    .card h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        color: #1a237e;
+    }
+
+    .card p {
+        margin: 0;
+        color: #444;
+    }
+
+    a.paper-link {
+        display: inline-block;
+        margin-top: 10px;
+        color: #3949ab;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a.paper-link:hover {
+        text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    /* Updated header + nav styling to match Education page */
+    .nav-bar ul {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .nav-bar ul li a {
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 8px 14px;
+        border-radius: 6px;
+        transition: background 0.3s ease;
+    }
+
+    .nav-bar ul li a:hover,
+    .nav-bar ul li a.active {
+        background: rgba(255,255,255,0.18);
+        backdrop-filter: blur(4px);
+    }
+</style>
 </head>
 <body>
-    <header>
+    <header class="page-header">
         <h1>Publications</h1>
-        <nav>
+        <nav class="nav-bar">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="education.html">Education</a></li>
                 <li><a href="research.html">Research Experience</a></li>
                 <li><a href="teaching.html">Teaching Experience</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <div class="profile-picture">
             <img src="pic1.jpg" alt="Profile Picture">
         </div>
-        <section>
+
+        <section class="content-section">
             <h2>Publications</h2>
-            <ul>
-                <li>Kumar, A., Pratap, A., and Singh, A. K. (2023,Febuary). <a href="https://ieeexplore.ieee.org/abstract/document/9950318">Generative Adversarial Neural Machine Translation for Phonetic Languages via Reinforcement Learning.</a> IEEE Transactions on Emerging Topics in Computational Intelligence, vol. 7, pp. 190‑199.</li>
-                <li>Kumar, A., Pratap, A., Singh, A.K., and Saha, S.(2022). <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417422004547">Addressing Domain Shift in Neural Machine Translation via Reinforcement Learning.</a> Expert Systems With Applications, vol. 201, pp. 117039.</li>            
-                <li>Kumar, A., Mundotiya, R.K., Pratap, A., and Singh, A.K.(2022). <a href="https://www.sciencedirect.com/science/article/pii/S1319157822000921">TLSPG: Transfer Learning‑based Semi‑supervised Pseudo‑corpus Generation Approach for Zero‑Shot Translation.</a> Journal of King Saud University‑ Computer and Information Sciences, vol. 34, pp. 6552‑6563.</li>
-                <li>Kumar, A., Parida, S., Pratap, A., and Singh, A. K. (2023). <a href="https://link.springer.com/article/10.1007/s12046-023-02275-0">Machine Translation by Projecting the Text into the Same Phonetic‑Orthographic Space Using a Common Encoding.</a> Sādhanā, vol. 48, 238.</li>
-                <li>Kumar, A., Mundotiya, R. K., and Singh, A. K. (2020, December). <a href="https://aclanthology.org/2020.loresmt-1.6/">Unsupervised approach for zero‑shot experiments: Bhojpuri–Hindi and Magahi–Hindi@ loresmt 2020.</a> In Proceedings of the 3rd Workshop on Technologies for MT of Low Resource Languages (pp. 43‑46).</li>
-                <li>Kumar, A., Baruah, R., Mundotiya, R.K., and Singh, A.K.(2020,November). <a href="https://aclanthology.org/2020.wmt-1.44/">Transformer‑based Neural Machine Translation System for Hindi–Marathi: WMT20 Shared Task.</a> In Proceedings of the Fifth Conference on Machine Translation (pp. 393‑395).</li>
-                <li>Kumar, A., and Singh, A.K. (2019, November). <a href="https://aclanthology.org/D19-5222/">NLPRL at WAT2019: Transformer‑based Tamil–English indic task neural machine translation system.</a> In Proceedings of the 6th Workshop on Asian Translation (pp. 171‑174).</li>
-                <li>Baruah, R., Mundotiya, R.K., Kumar, A., and Singh, A.K. (2020, November). <a href="https://aclanthology.org/2020.wmt-1.126/">NLPRL system for very low resource supervised machine translation.</a> In Proceedings of the Fifth Conference on Machine Translation (pp. 1075-1078)</li>
-<!--                 <li>Title of Publication 1 - Journal Name, Year</l i>
-                <li>Title of Publication 2 - Journal Name, Year</li> -->
-            </ul>
+            <div class="card-list">
+                <div class="card">
+                    Kumar, A., Pratap, A., & Singh, A. K. (2023). 
+                    <a href="https://ieeexplore.ieee.org/abstract/document/9950318" target="_blank">Generative Adversarial Neural Machine Translation for Phonetic Languages via Reinforcement Learning</a>.
+                    <div class="pub-meta">IEEE Transactions on Emerging Topics in Computational Intelligence, 7, 190-199.</div>
+                </div>
+
+                <div class="card">
+                    Kumar, A., Pratap, A., Singh, A. K., & Saha, S. (2022). 
+                    <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417422004547" target="_blank">Addressing Domain Shift in Neural Machine Translation via Reinforcement Learning</a>.
+                    <div class="pub-meta">Expert Systems With Applications, 201, 117039.</div>
+                </div>
+
+                <div class="card">
+                    Kumar, A., Mundotiya, R. K., Pratap, A., & Singh, A. K. (2022). 
+                    <a href="https://www.sciencedirect.com/science/article/pii/S1319157822000921" target="_blank">TLSPG: Transfer Learning-based Semi-supervised Pseudo-corpus Generation for Zero-Shot Translation</a>.
+                    <div class="pub-meta">Journal of King Saud University – Computer & Information Sciences, 34, 6552-6563.</div>
+                </div>
+
+                <div class="card">
+                    Kumar, A., Parida, S., Pratap, A., & Singh, A. K. (2023). 
+                    <a href="https://link.springer.com/article/10.1007/s12046-023-02275-0" target="_blank">Machine Translation by Projecting the Text into the Same Phonetic-Orthographic Space Using a Common Encoding</a>.
+                    <div class="pub-meta">Sādhanā, 48, 238.</div>
+                </div>
+
+                <div class="card">
+                    Kumar, A., Mundotiya, R. K., & Singh, A. K. (2020). 
+                    <a href="https://aclanthology.org/2020.loresmt-1.6/" target="_blank">Unsupervised Approach for Zero-shot Experiments: Bhojpuri–Hindi and Magahi–Hindi @ LoResMT 2020</a>.
+                    <div class="pub-meta">Workshop on Technologies for MT of Low Resource Languages, pp. 43–46.</div>
+                </div>
+
+                <div class="card">
+                    Kumar, A., Baruah, R., Mundotiya, R. K., & Singh, A. K. (2020). 
+                    <a href="https://aclanthology.org/2020.wmt-1.44/" target="_blank">Transformer-based Neural Machine Translation System for Hindi–Marathi: WMT20 Shared Task</a>.
+                    <div class="pub-meta">Fifth Conference on Machine Translation, pp. 393–395.</div>
+                </div>
+
+                <div class="card">
+                    Kumar, A., & Singh, A. K. (2019). 
+                    <a href="https://aclanthology.org/D19-5222/" target="_blank">NLPRL at WAT2019: Transformer-based Tamil–English Neural Machine Translation</a>.
+                    <div class="pub-meta">Workshop on Asian Translation, pp. 171–174.</div>
+                </div>
+
+                <div class="card">
+                    Baruah, R., Mundotiya, R. K., Kumar, A., & Singh, A. K. (2020). 
+                    <a href="https://aclanthology.org/2020.wmt-1.126/" target="_blank">NLPRL System for Very Low-resource Supervised Machine Translation</a>.
+                    <div class="pub-meta">Fifth Conference on Machine Translation, pp. 1075–1078.</div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-<!--         <p>&copy; 2024 Amit Kumar. All rights reserved.</p> -->
-    </footer>
 </body>
 </html>
