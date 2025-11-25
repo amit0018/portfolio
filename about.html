@@ -1,7 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - My Portfolio</title>
     <title>About Me | Amit Kumar</title>
     <link rel="stylesheet" href="styles.css">
 
@@ -24,6 +25,8 @@
             display: flex;
             justify-content: center;
             gap: 25px;
+            flex-wrap: wrap;
+            padding: 0;
         }
         .subpage-header nav a {
             color: #fff;
@@ -92,59 +95,59 @@
         }
     </style>
 </head>
-<body>
-    <header>
 
+<body>
+
+    <!-- HEADER -->
     <header class="subpage-header">
         <h1>About Me</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="education.html">Education</a></li>
                 <li><a href="research.html">Research Experience</a></li>
                 <li><a href="teaching.html">Teaching Experience</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
                 <li><a href="publications.html">Publications</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="profile-picture">
-            <img src="pic1.jpg" alt="Profile Picture">
 
-    <section class="about-section">
-        <div class="about-picture">
-            <img src="pic1.jpg" alt="Amit Kumar Photo">
-        </div>
-        <section>
+    <!-- MAIN CONTENT -->
+    <main>
+        <section class="about-section">
+            
+            <div class="about-picture">
+                <img src="pic1.jpg" alt="Amit Kumar Photo">
+            </div>
+
             <h2>About Me</h2>
-            <p>Amit is an AI researcher having 6+ years of research experience and worked on various cutting edge NLP techniques. He received his PhD in Computer Science & Engineering from Indian Institute of Technology (B.H.U.), Varanasi, and subsequently held Postdoctoral Research Associate position in Data Science at the University of Manchester.</p>
+
+            <p>
+                I am an AI and NLP researcher with over six years of research experience, specializing in generative models,
+                multilingual processing, machine translation, and phonetic–orthographic modeling. I completed my Ph.D. in
+                Computer Science & Engineering from the prestigious Indian Institute of Technology (BHU), Varanasi.
+            </p>
+
+            <p>
+                Following this, I served as a Postdoctoral Research Associate in Data Science at The University of Manchester,
+                U.K., where I contributed to impactful cross-domain AI research.
+            </p>
+
+            <p>
+                Currently, I am an Assistant Professor at the Indian Institute of Information Technology, Allahabad, where I
+                teach and conduct research in NLP, AI, and Machine Learning. My work bridges theoretical advancements with
+                practical, real-world language technology applications.
+            </p>
+
         </section>
     </main>
 
-        <h2>About Me</h2>
-
-        <p>
-            I am an AI and NLP researcher with over six years of research experience, specializing in generative models,
-            multilingual processing, machine translation, and phonetic–orthographic modeling. I completed my Ph.D. in Computer
-            Science & Engineering from the prestigious Indian Institute of Technology (BHU), Varanasi. Following this, I served
-            as a Postdoctoral Research Associate in Data Science at The University of Manchester, U.K., where I contributed to
-            impactful cross-domain AI research.
-        </p>
-        <br>
-        <p>
-            Currently, I am an Assistant Professor at the Indian Institute of Information Technology, Allahabad, where I teach
-            and conduct research in NLP, AI, and Machine Learning. My work bridges theoretical advancements with practical,
-            real-world language technology applications.
-        </p>
-    </section>
-
+    <!-- FOOTER -->
     <footer>
-<!--         <p>&copy; 2024 Amit Kumar. All rights reserved.</p> -->
         © Amit Kumar | NLP • AI • Research
     </footer>
+
 </body>
 </html>
