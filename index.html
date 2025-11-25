@@ -3,42 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit Kumar</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Amit Kumar | NLP Researcher & Assistant Professor</title>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8f9fb;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container { width: 90%; max-width: 1100px; margin: auto; }
+        .header {
+            background: #0f172a;
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+        .title { font-size: 2rem; font-weight: 600; }
+        .nav-list {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-top: 10px;
+            gap: 25px;
+        }
+        .nav-list a { color: #fff; text-decoration: none; font-weight: 300; transition: 0.3s; }
+        .nav-list a:hover { color: #38bdf8; }
+        .main { margin: 50px auto; }
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            justify-content: center;
+        }
+        .profile-picture img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: 0.4s;
+        }
+        .profile-picture img:hover { transform: scale(1.05); }
+        .intro { max-width: 600px; }
+        .greeting { font-size: 2rem; font-weight: 600; color: #1e293b; margin-bottom: 10px; }
+        .description { font-size: 1rem; margin-bottom: 20px; }
+        .role-list { list-style: square; padding-left: 20px; }
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #0f172a;
+            color: #fff;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    
+        /* Hero Banner */
+        .hero-banner {
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            padding: 70px 20px;
+            text-align: center;
+            color: #fff;
+            animation: fadeInZoom 1.2s ease;
+        }
+        .hero-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        @keyframes fadeInZoom {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <h1>Amit Kumar</h1>
-        <nav>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="research.html">Research Experience</a></li>
-                <li><a href="teaching.html">Teaching Experience</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="profile-picture">
-            <img src="pic1.jpg" alt="Profile Picture">
+    <header class="header">
+        <div class="container">
+            <h1 class="title">Amit Kumar</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Research</a></li>
+                    <li><a href="#">Teaching</a></li>
+                    <li><a href="#">Publications</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <section>
-            <html lang="hi">
-<!--                 <h2>नमस्कार!</h2> -->
-            </html>
-<!--             <h2>Welcome to My Portfolio</h2> -->
-            <p><h2>नमस्कार!</h2> I am a passionate researcher with range of expertise in NLP, data science and AI who can work both independently and as a supportive team member and is capable of quickly assimilate information, summarise and draw conclusions. </p>
-            <ul>
-                <li><b>Assistant Professor</b> @ Indian Institute of Information Technology, Allahabad, Prayagraj, Uttar Pradesh, India</li>
-                <li><b>Alumni Postdoctoral Research Associate in Data Science</b> @ The University of Manchester, England, U.K.</li>
-                <li><b>PhD</b> @ IIT (B.H.U.), Varanasi, India</li>
-            </ul>
+        <section class="hero-banner">
+            <h2 class="hero-title">Advancing NLP, AI & Multilingual Technologies</h2>
+            <p class="hero-subtitle">Researcher • Educator • Innovator</p>
         </section>
+    </header>
+
+    <main class="main container">
+        <div class="profile-section">
+            <div class="profile-picture">
+                <img src="https://via.placeholder.com/220" alt="Profile Picture">
+            </div>
+
+            <section class="intro">
+                <h2 class="greeting">नमस्कार!</h2>
+                <p class="description">
+                    I am a passionate researcher with expertise in <b>NLP, Data Science, AI, and Generative Models</b>.
+                    I work independently and collaboratively, quickly assimilating complex information to produce impactful results.
+                </p>
+                <ul class="role-list">
+                    <li><b>Assistant Professor</b> — IIIT Allahabad, India</li>
+                    <li><b>Postdoctoral Research Associate</b> — The University of Manchester, U.K.</li>
+                    <li><b>Ph.D.</b> — IIT (BHU), Varanasi, India</li>
+                </ul>
+            </section>
+        </div>
     </main>
-    <footer>
-<!--         <p>&copy; 2024 Amit Kumar. All rights reserved.</p> -->
+
+    <footer class="footer">
+        <p>© Amit Kumar | NLP • AI • Research</p>
     </footer>
 </body>
 </html>
