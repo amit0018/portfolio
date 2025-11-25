@@ -168,3 +168,29 @@ body {
         text-align: center;
     }
 }
+
+/* Subpage Banner (same style as About) */
+.subpage-banner {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    margin-bottom: 40px;
+    border-radius: 12px;
+}
+
+.subpage-banner h1 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+}
+
+.subpage-banner p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Active link highlight */
+.nav-links a.active {
+    color: #ffd700;
+    font-weight: 700;
+}
