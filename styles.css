@@ -258,3 +258,25 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* === FIX GRID POSITIONING ISSUE === */
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 3fr 1.2fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* Force correct column placement */
+.profile-section {
+    grid-column: 1 / 2;
+    justify-content: flex-start;   /* 🔑 stop centering */
+}
+
+/* Events on right */
+.events-sidebar {
+    grid-column: 2 / 3;
+    justify-self: stretch;
+}
+
