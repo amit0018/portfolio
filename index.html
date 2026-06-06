@@ -1,263 +1,613 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit Kumar | NLP Researcher & Assistant Professor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Amit Kumar | NLP Researcher & Assistant Professor</title>
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #f8f9fb;
-            color: #333;
-            line-height: 1.6;
-        }
+<style>
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
+:root{
+    --primary:#0f172a;
+    --secondary:#475569;
+    --accent:#2563eb;
+    --light:#f8fafc;
+    --border:#e2e8f0;
+    --white:#ffffff;
+}
 
-        /* HEADER */
-        .header {
-            background: linear-gradient(135deg, #003973, #e5e5be);
-            color: #fff;
-            padding: 20px 0;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            text-align: center;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        .title { font-size: 2rem; font-weight: 600; }
+html{
+    scroll-behavior:smooth;
+}
 
-        .nav-list {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin-top: 10px;
-            gap: 25px;
-        }
+body{
+    font-family:'Inter',sans-serif;
+    background:#fff;
+    color:var(--primary);
+    line-height:1.7;
+}
 
-        .nav-list a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 300;
-            transition: 0.3s;
-        }
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
 
-        .nav-list a:hover { color: #38bdf8; }
+/* ================= HEADER ================= */
 
-        /* HERO */
-        .hero-banner {
-            background: #2a4d69;
-            padding: 30px 20px;
-            text-align: center;
-            color: #fff;
-        }
+header{
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-        .hero-title {
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
 
-        .hero-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
+.logo h1{
+    font-size:1.4rem;
+    font-weight:700;
+}
 
-        /* MAIN LAYOUT (IMPORTANT FIX) */
-        .main {
-            margin: 50px auto;
-        }
+.logo span{
+    display:block;
+    font-size:0.85rem;
+    color:var(--secondary);
+}
 
-        .main-layout {
-            display: grid;
-            grid-template-columns: 2.7fr 1.3fr;
-            gap: 35px;
-            align-items: start;
-        }
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:28px;
+}
 
-        /* PROFILE SECTION (LEFT) */
-        .profile-section {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 40px;
-            justify-content: flex-start; /* FIXED */
-        }
+.nav-links a{
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:500;
+    transition:0.3s;
+}
 
-        .profile-picture img {
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid #e2e8f0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
+.nav-links a:hover{
+    color:var(--accent);
+}
 
-        .intro { max-width: 600px; }
+/* ================= HERO ================= */
 
-        .greeting {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 10px;
-        }
+.hero{
+    padding:70px 0;
+}
 
-        .description {
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
+.hero-grid{
+    display:grid;
+    grid-template-columns:280px 1fr;
+    gap:50px;
+    align-items:center;
+}
 
-        .role-list {
-            list-style: square;
-            padding-left: 20px;
-        }
+.hero-image img{
+    width:260px;
+    height:260px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #fff;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
 
-        /* EVENTS SIDEBAR (RIGHT) */
-        .events-sidebar {
-            background: linear-gradient(180deg, #f1f5f9, #ffffff);
-            padding: 22px;
-            border-radius: 14px;
-            border-left: 5px solid #003973;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 130px;
-        }
+.hero h2{
+    font-size:2.8rem;
+    margin-bottom:8px;
+}
 
-        .events-sidebar h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: #003973;
-        }
+.designation{
+    font-size:1.2rem;
+    color:var(--accent);
+    font-weight:600;
+}
 
-        .event {
-            background: #e0f2fe;
-            padding: 14px;
-            border-radius: 10px;
-            margin-bottom: 14px;
-            border-left: 4px solid #38bdf8;
-        }
+.affiliation{
+    color:var(--secondary);
+    margin-bottom:18px;
+}
 
-        .event-date {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #0369a1;
-            margin-bottom: 6px;
-        }
+.hero p{
+    margin-bottom:16px;
+}
 
-        .event-title {
-            font-size: 0.95rem;
-            color: #0f172a;
-        }
+.research-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin:20px 0;
+}
 
-        /* FOOTER */
-        .footer {
-            text-align: center;
-            padding: 20px 0;
-            background: #0f172a;
-            color: #fff;
-            margin-top: 40px;
-            font-size: 0.9rem;
-        }
+.tag{
+    background:#eff6ff;
+    color:#1d4ed8;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:.9rem;
+    font-weight:500;
+}
 
-        /* MOBILE */
-        @media (max-width: 900px) {
-            .main-layout {
-                grid-template-columns: 1fr;
-            }
+.quick-links{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
 
-            .events-sidebar {
-                position: static;
-            }
-        }
-    </style>
+.quick-links a{
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:8px;
+    border:1px solid var(--border);
+    color:var(--primary);
+    font-weight:500;
+    transition:0.3s;
+}
+
+.quick-links a:hover{
+    background:var(--accent);
+    color:#fff;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    background:var(--light);
+    padding:30px 0;
+    margin-bottom:60px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat-card{
+    background:#fff;
+    padding:25px;
+    border-radius:14px;
+    text-align:center;
+    border:1px solid var(--border);
+}
+
+.stat-card h3{
+    font-size:2rem;
+    color:var(--accent);
+}
+
+.stat-card p{
+    color:var(--secondary);
+}
+
+/* ================= MAIN ================= */
+
+.main-layout{
+    display:grid;
+    grid-template-columns:2.2fr 1fr;
+    gap:40px;
+    margin-bottom:70px;
+}
+
+.section{
+    margin-bottom:60px;
+}
+
+.section-title{
+    font-size:1.8rem;
+    margin-bottom:20px;
+    border-bottom:2px solid var(--border);
+    padding-bottom:10px;
+}
+
+/* Research */
+
+.interests{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.interest{
+    background:var(--light);
+    padding:18px;
+    border-radius:12px;
+}
+
+/* Publications */
+
+.paper{
+    padding:20px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    margin-bottom:16px;
+    transition:0.3s;
+}
+
+.paper:hover{
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.paper h4{
+    margin-bottom:8px;
+}
+
+.paper p{
+    color:var(--secondary);
+    font-size:.95rem;
+}
+
+/* Projects */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.project{
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:20px;
+}
+
+.project h4{
+    margin-bottom:10px;
+}
+
+/* Sidebar */
+
+.sidebar-card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:25px;
+    margin-bottom:25px;
+    position:sticky;
+    top:100px;
+}
+
+.news-item{
+    padding-bottom:18px;
+    margin-bottom:18px;
+    border-bottom:1px solid var(--border);
+}
+
+.news-item:last-child{
+    border:none;
+    margin-bottom:0;
+}
+
+.news-date{
+    color:var(--accent);
+    font-size:.85rem;
+    font-weight:600;
+}
+
+.news-title{
+    margin-top:6px;
+    font-size:.95rem;
+}
+
+/* Contact */
+
+.contact-box{
+    background:var(--light);
+    padding:25px;
+    border-radius:14px;
+}
+
+/* Footer */
+
+footer{
+    background:var(--primary);
+    color:#fff;
+    text-align:center;
+    padding:30px 0;
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+.hero-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.hero-image{
+    display:flex;
+    justify-content:center;
+}
+
+.main-layout{
+    grid-template-columns:1fr;
+}
+
+.stats-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.project-grid{
+    grid-template-columns:1fr;
+}
+
+.interests{
+    grid-template-columns:1fr;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.sidebar-card{
+    position:static;
+}
+}
+
+</style>
 </head>
 
 <body>
 
-<header class="header">
-    <div class="container">
-        <h1 class="title">Advancing NLP, AI & Multilingual Technologies</h1>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="about.html">About</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<header>
+<div class="container navbar">
 
-    <!-- <section class="hero-banner"> -->
-        <!-- <h2 class="hero-title">Advancing NLP, AI & Multilingual Technologies</h2> -->
-        <!-- <p class="hero-subtitle">Researcher • Educator • Innovator</p> -->
-    <!-- </section> -->
+<div class="logo">
+<h1>Dr. Amit Kumar</h1>
+<span>Assistant Professor | IIIT Allahabad</span>
+</div>
+
+<nav>
+<ul class="nav-links">
+<li><a href="#">About</a></li>
+<li><a href="#">Research</a></li>
+<li><a href="#">Publications</a></li>
+<li><a href="#">Teaching</a></li>
+<li><a href="#">Students</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+</div>
 </header>
 
-<main class="main container">
-    <div class="main-layout">
+<section class="hero">
+<div class="container">
 
-        <!-- LEFT -->
-        <section class="profile-section">
-            <div class="profile-picture">
-                <img src="pic1.jpg" alt="Profile Picture">
-            </div>
+<div class="hero-grid">
 
-            <div class="intro">
-                <h2 class="greeting">अमित कुमार </h2>
-                <p class="description">
-                    Amit Kumar is passionate researcher with expertise in
-                    <b>NLP, Data Science, AI, and Generative Models</b>, and also exploring applications of <b>Quantum Computing in multimodal AI</b>.
-                </p>
-                <ul class="role-list">
-                    <li><b>Assistant Professor</b> — IIIT Allahabad, Prayagraj, India (Present)</li>
-                    <li><b>Alumnus, Postdoctoral Research Associate in Data Science</b> — The University of Manchester, England, U.K.</li>
-                    <li><b>Ph.D. (Machine Translation)</b> — IIT (BHU), Varanasi, India (2022)</li>
-                </ul>
-                <!-- <p><span style="color:#1E90FF;">Think you can add value?</span> We are on early stage of team, join us, and <span style="color:#32CD32;">let’s make an outstanding team.</span></p> -->
-            </div>
-        </section>
+<div class="hero-image">
+<img src="pic1.jpg" alt="Dr. Amit Kumar">
+</div>
 
-        <!-- RIGHT -->
-        <aside class="events-sidebar">
-            <h3>News</h3>
+<div>
 
-            <div class="event">
-                <div class="event-date"><p style="color: red;">MANTRA 2026 @ IIIT-A | July 20–22, 2026</p></div>
-                <div class="event-title">
-                    Explore the powerful synergy of <strong>Machine Learning, Linear Algebra & Natural Language Technologies</strong> through expert talks and hands-on tutorials. <strong>Hybrid mode</strong> • <strong>Limited seats available!</strong> <a href="https://mantra.iiita.ac.in"><strong>Register Now</strong></a> 
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-date">January 2026</div>
-                <div class="event-title">
-                    Invited as an expert speaker on “Natural Language Processing with Quantum Kernels” in a three-day workshop, “Quantum AI for Scientific Discovery: Unlocking the Next Frontier in Research,” hosted by SRMIST, Tiruchirappalli Campus.
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-date">October 2025</div>
-                <div class="event-title">
-                    Published patent application (202521089586) on "SYSTEM FOR INTRUSION DETECTION".
-                </div>
-            </div>
-        </aside>
+<h2>अमित कुमार</h2>
 
-    </div>
-</main>
+<div class="designation">
+Assistant Professor
+</div>
 
-<footer class="footer">
-    <p>© Amit Kumar | NLP • AI • Research</p>
+<div class="affiliation">
+Indian Institute of Information Technology Allahabad, Prayagraj, India
+</div>
+
+<p>
+I work at the intersection of Natural Language Processing,
+Machine Translation, Large Language Models, Generative AI,
+and Quantum Machine Learning. My research focuses on building
+intelligent multilingual systems for low-resource languages and
+next-generation AI technologies.
+</p>
+
+<div class="research-tags">
+<span class="tag">Natural Language Processing</span>
+<span class="tag">Generative AI</span>
+<span class="tag">Machine Translation</span>
+<span class="tag">Quantum AI</span>
+<span class="tag">Multimodal Learning</span>
+</div>
+
+<div class="quick-links">
+<a href="#">Curriculum Vitae</a>
+<a href="#">Google Scholar</a>
+<a href="#">ORCID</a>
+<a href="#">GitHub</a>
+<a href="#">Email</a>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section class="stats">
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat-card">
+<h3>20+</h3>
+<p>Publications</p>
+</div>
+
+<div class="stat-card">
+<h3>1</h3>
+<p>Patent</p>
+</div>
+
+<div class="stat-card">
+<h3>5+</h3>
+<p>Research Projects</p>
+</div>
+
+<div class="stat-card">
+<h3>100+</h3>
+<p>Students Mentored</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<div class="container">
+
+<div class="main-layout">
+
+<div>
+
+<section class="section">
+<h3 class="section-title">Research Interests</h3>
+
+<div class="interests">
+<div class="interest">Natural Language Processing</div>
+<div class="interest">Large Language Models</div>
+<div class="interest">Machine Translation</div>
+<div class="interest">Quantum Machine Learning</div>
+<div class="interest">Generative AI</div>
+<div class="interest">Multimodal Intelligence</div>
+</div>
+
+</section>
+
+<section class="section">
+<h3 class="section-title">Selected Publications</h3>
+
+<div class="paper">
+<h4>Natural Language Processing with Quantum Kernels</h4>
+<p>Exploring quantum-enhanced representations for multilingual NLP systems.</p>
+</div>
+
+<div class="paper">
+<h4>Indic Language Machine Translation using Transformers</h4>
+<p>Advanced neural architectures for low-resource language translation.</p>
+</div>
+
+<div class="paper">
+<h4>Generative AI for Multilingual Text Understanding</h4>
+<p>Large language models for cross-lingual learning and adaptation.</p>
+</div>
+
+</section>
+
+<section class="section">
+
+<h3 class="section-title">Featured Research Projects</h3>
+
+<div class="project-grid">
+
+<div class="project">
+<h4>Quantum NLP</h4>
+<p>Quantum-enhanced approaches for language understanding.</p>
+</div>
+
+<div class="project">
+<h4>Indic LLMs</h4>
+<p>Building language models for Indian languages.</p>
+</div>
+
+<div class="project">
+<h4>Machine Translation</h4>
+<p>Low-resource multilingual translation systems.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+<h3 class="section-title">Students & Collaborators</h3>
+
+<p>
+I welcome motivated students interested in NLP,
+Generative AI, Machine Learning, and Quantum AI.
+Prospective PhD, M.Tech, and B.Tech students are encouraged
+to contact me with their research interests.
+</p>
+</section>
+
+<section class="section">
+
+<h3 class="section-title">Contact</h3>
+
+<div class="contact-box">
+
+<p><strong>Office:</strong> IIIT Allahabad, Prayagraj, India</p>
+<p><strong>Email:</strong> amit@iiita.ac.in</p>
+<p><strong>Research Areas:</strong> NLP, LLMs, Quantum AI, Machine Translation</p>
+
+</div>
+
+</section>
+
+</div>
+
+<aside>
+
+<div class="sidebar-card">
+
+<h3 style="margin-bottom:20px;">Latest News</h3>
+
+<div class="news-item">
+<div class="news-date">July 20–22, 2026</div>
+<div class="news-title">
+MANTRA 2026 @ IIIT Allahabad
+Machine Learning, Linear Algebra and Natural Language Technologies.
+</div>
+</div>
+
+<div class="news-item">
+<div class="news-date">January 2026</div>
+<div class="news-title">
+Invited talk on Natural Language Processing with Quantum Kernels.
+</div>
+</div>
+
+<div class="news-item">
+<div class="news-date">October 2025</div>
+<div class="news-title">
+Patent application published on Intrusion Detection System.
+</div>
+</div>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Amit Kumar | Natural Language Processing • Generative AI • Quantum AI</p>
 </footer>
 
 </body>
 </html>
+```
