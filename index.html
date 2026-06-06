@@ -1,264 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit Kumar | NLP Researcher & Assistant Professor</title>
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dr. Amit Kumar</title><link rel="stylesheet" href="styles.css"></head><body>
+<header><div class="container header-wrap">
+<div class="logo">Dr. Amit Kumar</div>
+<nav><ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="teaching.html">Teaching</a></li>
+<li><a href="publications.html">Publications</a></li>
+<li><a href="team.html">Team</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul></nav></div></header>
+<div class="container">
+<div class="main-layout">
+<div class="card profile">
+<img src="pic1.jpeg">
+<div>
+<h1>अमित कुमार</h1>
+<h3>Assistant Professor, IIIT Allahabad</h3>
+<p>Passionate researcher with expertise in NLP, Data Science, AI, and Generative Models, and also exploring applications of Quantum Computing in multimodal AI.</p>
+<!--<ul class="role-list">-->
+<!--                    <li><b>Alum at UniManchester</b></li>-->
+<!--                    <li><b>PhD at IIT(BHU) Varanasi (2022)</b></li>-->
+<!--</ul>-->
+<p class="tags">
+<span>NLP</span><span>LLMs</span><span>Generative AI</span>
+<span>Machine Translation</span><span>Quantum AI</span>
+</p>
+<a class="btn" href="publications.html">Publications</a>
+<a class="btn" href="contact.html">Contact</a>
+</div></div>
+<div class="card news-card">
+    <h2>Latest News</h2>
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+    <div class="news-container">
+        <div class="news-scroll">
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #f8f9fb;
-            color: #333;
-            line-height: 1.6;
-        }
+            <div class="news-item">
+                <b>MANTRA 2026 @ IIIT-A | July 20–22, 2026</b><br>
+                Explore the powerful synergy of
+                <strong>Machine Learning, Linear Algebra &
+                Natural Language Technologies</strong> through
+                expert talks and hands-on tutorials.
+                <strong>Hybrid mode</strong> •
+                <strong>Limited seats available!</strong>
+                <a href="https://mantra.iiita.ac.in">
+                    <strong>Register Now</strong>
+                </a>
+            </div>
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-        }
+            <div class="news-item">
+                <b>Invited Talk | January 2026</b><br>
+                Invited as an expert speaker on
+                "Natural Language Processing with Quantum Kernels"
+                at SRMIST, Tiruchirappalli.
+            </div>
 
-        /* HEADER */
-        .header {
-            background: linear-gradient(135deg, #003973, #e5e5be);
-            color: #fff;
-            padding: 20px 0;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            text-align: center;
-        }
+            <div class="news-item">
+                <b>Patent | October 2025</b><br>
+                Published patent application
+                (202521089586) on
+                "SYSTEM FOR INTRUSION DETECTION".
+            </div>
 
-        .title { font-size: 2rem; font-weight: 600; }
+            <!-- Duplicate items for seamless looping -->
 
-        .nav-list {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            margin-top: 10px;
-            gap: 25px;
-        }
+            <div class="news-item">
+                <b>MANTRA 2026 @ IIIT-A | July 20–22, 2026</b><br>
+                Explore the powerful synergy of
+                <strong>Machine Learning, Linear Algebra &
+                Natural Language Technologies</strong>.
+            </div>
 
-        .nav-list a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 300;
-            transition: 0.3s;
-        }
+            <div class="news-item">
+                <b>Invited Talk | January 2026</b><br>
+                Natural Language Processing with Quantum Kernels.
+            </div>
 
-        .nav-list a:hover { color: #38bdf8; }
+            <div class="news-item">
+                <b>Patent | October 2025</b><br>
+                Published patent application
+                (202521089586).
+            </div>
 
-        /* HERO */
-        .hero-banner {
-            background: #2a4d69;
-            padding: 30px 20px;
-            text-align: center;
-            color: #fff;
-        }
-
-        .hero-title {
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        /* MAIN LAYOUT (IMPORTANT FIX) */
-        .main {
-            margin: 50px auto;
-        }
-
-        .main-layout {
-            display: grid;
-            grid-template-columns: 2.7fr 1.3fr;
-            gap: 35px;
-            align-items: start;
-        }
-
-        /* PROFILE SECTION (LEFT) */
-        .profile-section {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 40px;
-            justify-content: flex-start; /* FIXED */
-        }
-
-        .profile-picture img {
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid #e2e8f0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .intro { max-width: 600px; }
-
-        .greeting {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 10px;
-        }
-
-        .description {
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        .role-list {
-            list-style: square;
-            padding-left: 20px;
-        }
-
-        /* EVENTS SIDEBAR (RIGHT) */
-        .events-sidebar {
-            background: linear-gradient(180deg, #f1f5f9, #ffffff);
-            padding: 22px;
-            border-radius: 14px;
-            border-left: 5px solid #003973;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 130px;
-        }
-
-        .events-sidebar h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: #003973;
-        }
-
-        .event {
-            background: #e0f2fe;
-            padding: 14px;
-            border-radius: 10px;
-            margin-bottom: 14px;
-            border-left: 4px solid #38bdf8;
-        }
-
-        .event-date {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #0369a1;
-            margin-bottom: 6px;
-        }
-
-        .event-title {
-            font-size: 0.95rem;
-            color: #0f172a;
-        }
-
-        /* FOOTER */
-        .footer {
-            text-align: center;
-            padding: 20px 0;
-            background: #0f172a;
-            color: #fff;
-            margin-top: 40px;
-            font-size: 0.9rem;
-        }
-
-        /* MOBILE */
-        @media (max-width: 900px) {
-            .main-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .events-sidebar {
-                position: static;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<header class="header">
-    <div class="container">
-        <h1 class="title">Advancing NLP, AI & Multilingual Technologies</h1>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="about.html">About</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="publications.html">Publications</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        </div>
     </div>
+</div></div>
 
-    <!-- <section class="hero-banner"> -->
-        <!-- <h2 class="hero-title">Advancing NLP, AI & Multilingual Technologies</h2> -->
-        <!-- <p class="hero-subtitle">Researcher • Educator • Innovator</p> -->
-    <!-- </section> -->
-</header>
-
-<main class="main container">
-    <div class="main-layout">
-
-        <!-- LEFT -->
-        <section class="profile-section">
-            <div class="profile-picture">
-                <img src="pic1.jpg" alt="Profile Picture">
-            </div>
-
-            <div class="intro">
-                <h2 class="greeting">अमित कुमार </h2>
-                <p class="description">
-                    Amit Kumar is passionate researcher with expertise in
-                    <b>NLP, Data Science, AI, and Generative Models</b>, and also exploring applications of <b>Quantum Computing in multimodal AI</b>.
-                </p>
-                <ul class="role-list">
-                    <li><b>Assistant Professor</b> — IIIT Allahabad, Prayagraj, India (Present)</li>
-                    <li><b>Alumnus, Postdoctoral Research Associate in Data Science</b> — The University of Manchester, England, U.K.</li>
-                    <li><b>Ph.D. (Machine Translation)</b> — IIT (BHU), Varanasi, India (2022)</li>
-                </ul>
-                <!-- <p><span style="color:#1E90FF;">Think you can add value?</span> We are on early stage of team, join us, and <span style="color:#32CD32;">let’s make an outstanding team.</span></p> -->
-            </div>
-        </section>
-
-        <!-- RIGHT -->
-        <aside class="events-sidebar">
-            <h3>News</h3>
-
-            <div class="event">
-                <div class="event-date"><p style="color: red;">MANTRA 2026 @ IIIT-A | July 20–22, 2026</p></div>
-                <div class="event-title">
-                    Explore the powerful synergy of <strong>Machine Learning, Linear Algebra & Natural Language Technologies</strong> through expert talks and hands-on tutorials. <strong>Hybrid mode</strong> • <strong>Limited seats available!</strong> <a href="https://mantra.iiita.ac.in"><strong>Register Now</strong></a> 
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-date">January 2026</div>
-                <div class="event-title">
-                    Invited as an expert speaker on “Natural Language Processing with Quantum Kernels” in a three-day workshop, “Quantum AI for Scientific Discovery: Unlocking the Next Frontier in Research,” hosted by SRMIST, Tiruchirappalli Campus.
-                </div>
-            </div>
-            <div class="event">
-                <div class="event-date">October 2025</div>
-                <div class="event-title">
-                    Published patent application (202521089586) on "SYSTEM FOR INTRUSION DETECTION".
-                </div>
-            </div>
-        </aside>
-
-    </div>
-</main>
-
-<footer class="footer">
-    <p>© Amit Kumar | NLP • AI • Research</p>
-</footer>
-
-</body>
-</html>
-
+<div class="card">
+<h2>Research Interests</h2>
+<div class="grid">
+<div>Natural Language Processing</div>
+<div>Machine Translation</div>
+<div>Generative AI</div>
+<div>Large Language Models</div>
+<div>Quantum Machine Learning</div>
+<div>Multilingual Technologies</div>
+</div>
+</div>
+</div>
+<footer>© 2026 Amit Kumar | NLP • AI • Research</footer>
+</body></html>
